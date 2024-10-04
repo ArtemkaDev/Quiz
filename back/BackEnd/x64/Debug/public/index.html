@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div id="start-screen" class="text-center">
+            <h1>Викторина</h1>
+            <input type="text" id="username" class="form-control my-3" placeholder="Введите ваше имя">
+            <button id="start-btn" class="btn btn-primary">Начать</button>
+        </div>
+        <div id="menu-screen" class="text-center d-none">
+            <h2>Привет, <span id="user"></span>!</h2>
+            <button id="new-quiz-btn" class="btn btn-success my-3">Новая Викторина</button>
+            <button id="exit-btn" class="btn btn-danger">Выход</button>
+        </div>
+        <div id="category-screen" class="text-center d-none">
+            <h2>Выберите категорию:</h2>
+            <button class="btn btn-info my-2 category-btn" data-category="history">История</button>
+            <button class="btn btn-info my-2 category-btn" data-category="geography">География</button>
+            <button class="btn btn-info my-2 category-btn" data-category="biology">Биология</button>
+            <button class="btn btn-info my-2 category-btn" data-category="math">Математика</button>
+        </div>
+        <div id="quiz-screen" class="d-none">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" id="question"></h5>
+                    <div id="options" class="list-group"></div>
+                    <button id="next-btn" class="btn btn-primary mt-3 d-none">Следующий вопрос</button>
+                </div>
+            </div>
+        </div>
+        <div id="result-screen" class="text-center d-none">
+            <h2>Результаты Викторины</h2>
+            <p id="score"></p>
+            <button id="back-to-menu-btn" class="btn btn-secondary">Назад в меню</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
